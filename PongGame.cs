@@ -149,6 +149,7 @@ internal sealed class PongGame : Game
     private void AddPaddlePhysics(Primitive paddle, bool isPlayer)
     {
         var body = paddle.AddBehavior(new BoxRigidBody(_physics));
+        body.MotionType = BodyMotionType.Kinematic;
         body.CreateRigidBody(0f);
 
         var speed = isPlayer ? PongTuning.PlayerPaddleSpeed : PongTuning.CpuPaddleSpeed;

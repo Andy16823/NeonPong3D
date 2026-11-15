@@ -8,7 +8,7 @@ using Keys = OpenTK.Windowing.GraphicsLibraryFramework.Keys;
 
 namespace NeonPong3D;
 
-/// <summary>Moves a paddle and synchronizes its controlled transform with Bullet.</summary>
+/// <summary>Moves a paddle and synchronizes its kinematic transform with Bullet.</summary>
 internal sealed class PaddleBehavior : IGameBehavior
 {
     private readonly LibGFX.Core.Window _window;

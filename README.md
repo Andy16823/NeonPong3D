@@ -1,6 +1,6 @@
 # Neon Pong 3D
 
-Kleine 3D-Pong-Tech-Demo auf Basis von GFX 1.1.3.6 und Bullet-Physik.
+Kleine 3D-Pong-Tech-Demo auf Basis von GFX 1.1.3.7 und Bullet-Physik. Die Schläger nutzen kinematische Rigidbodies.
 
 ## Starten
 
@@ -9,7 +9,7 @@ dotnet restore
 dotnet run --project .\NeonPong3D.csproj
 ```
 
-Das Paket `GFX 1.1.3.6` wird aus dem lokalen Feed `C:\Users\andy1\Documents\NugetLocal` bezogen. Dieser Feed ist in der NuGet-Konfiguration der Entwicklungsumgebung registriert.
+Das Paket `GFX 1.1.3.7` wird aus dem lokalen Feed `C:\Users\andy1\Documents\NugetLocal` bezogen. Dieser Feed ist in der NuGet-Konfiguration der Entwicklungsumgebung registriert.
 
 ## Steuerung
 
