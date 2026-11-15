@@ -1,31 +1,41 @@
 # Neon Pong 3D
 
-Kleine 3D-Pong-Tech-Demo auf Basis von GFX 1.1.3.7 und Bullet-Physik. Die Schläger nutzen kinematische Rigidbodies.
+A small 3D Pong tech demo built with the GFX engine and Bullet physics.
 
-## Starten
+## Features
+
+- 3D playfield with a neon-inspired look and HUD
+- Dynamic ball rigid body with impulse serves and collisions
+- Kinematic player and CPU paddles
+- CPU opponent with configurable aim error
+- First to seven points wins
+- IBM Plex Mono HUD font, distributed with the SIL Open Font License 1.1
+
+## Requirements
+
+- Windows
+- .NET 8 SDK
+- Access to a NuGet feed containing GFX `1.1.4` and GFX.BulletSharp `1.0.1`
+
+## Build and run
 
 ```powershell
 dotnet restore
 dotnet run --project .\NeonPong3D.csproj
 ```
 
-Das Paket `GFX 1.1.3.7` wird aus dem lokalen Feed `C:\Users\andy1\Documents\NugetLocal` bezogen. Dieser Feed ist in der NuGet-Konfiguration der Entwicklungsumgebung registriert.
+## Controls
 
-## Steuerung
+- `W` / `S`: move the left paddle
+- `Space`: reset the ball and serve again; the score is preserved
+- `R`: start a new match after the game ends
+- `Esc`: quit the game
 
-- `W` / `S`: linker Spieler-Schläger
-- `R`: Match nach Spielende neu starten
-- `Esc`: Spiel schließen
+## Project layout
 
-## Aufbau
+- `PongGame.cs`: scene setup, game loop, HUD, and scoring
+- `PongBehaviors.cs`: paddle and ball behaviors, plus shared gameplay tuning values
+- `Resources/Fonts`: IBM Plex Mono Regular and its license
+- `TODO.md`: planned engine and demo improvements
 
-- `PongGame.cs`: Szene, Spielfeld, HUD, Spielzustand und Punktestand
-- `PongBehaviors.cs`: Paddle- und Ball-Behaviors sowie zentrale Tuningwerte
-- `TODO.md`: offene Engine- und Demo-Punkte
-- `Resources/Fonts`: IBM Plex Mono Regular plus OFL-Lizenz
-
-
-## Schriftart
-
-Das HUD verwendet IBM Plex Mono Regular. Fontdatei und SIL Open Font License 1.1 liegen in `Resources/Fonts`; die Lizenz wird beim Build ebenfalls in den Ausgabeordner kopiert.
-
+The font license is included at `Resources/Fonts/OFL.txt` and is copied to the build output.
